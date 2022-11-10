@@ -5,7 +5,7 @@ import { blogCrud } from "../route-urls";
 const Create = () => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const [author, setAuthor] = useState('mario');
+    const [author, setAuthor] = useState('Ashutosh');
     const [niche, setNiche] = useState('personal');
     const [isLoading, setIsLoading] = useState(false);
     const history = useHistory();
@@ -48,14 +48,10 @@ const Create = () => {
                     value={author}
                     onChange={(e)=>setAuthor(e.target.value)}
                 >
-                    <option value="mario">mario</option>
-                    <option value="yoshi">yoshi</option>
+                    <option value="ashutosh">Ashutosh</option>
                 </select>
                 {!isLoading && <button>Add Blog</button>}
                 {isLoading && <button disabled>Adding Blog...</button>}
-                <p>{title}</p>
-                <p>{content}</p>
-                <p>{author}</p>
             </form>
         </div>
      );
